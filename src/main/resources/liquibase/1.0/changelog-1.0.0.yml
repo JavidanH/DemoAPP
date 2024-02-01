@@ -1,0 +1,33 @@
+databaseChangeLog:
+  -  changeSet:
+       id:  Create student table
+       author:  Javidan Hajiyev
+       changes:
+         -  createTable:
+              tableName:  student
+              columns:
+                -  column:
+                     name:  id
+                     type:  int
+                     autoIncrement:  true
+                     constraints:
+                       primaryKey:  true
+                       nullable:  false
+                -  column:
+                     name:  firstname
+                     type:  varchar(50)
+                -  column:
+                     name:  lastname
+                     type:  varchar(50)
+                     constraints:
+                       nullable:  false
+                - column:
+                    name: status
+                    type: varchar(16)
+                    constraints:
+                      nullable: false
+                - column:
+                    name: field
+                    type: text
+
+            remarks: Table to store information about payments
